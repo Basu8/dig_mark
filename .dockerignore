@@ -1,0 +1,27 @@
+# Node modules and build outputs
+node_modules
+.next
+out
+
+# Env files (don't bake into Docker image)
+.env*
+firebase-debug.log
+
+# Platform config folders
+.vercel
+.firebase
+.netlify
+
+# System/editor files
+.DS_Store
+.vscode
+
+# Git files
+.git
+.gitignore
+
+# Logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+*.log

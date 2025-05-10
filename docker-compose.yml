@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  app:
+    image: basu6/digimark   # Use this if pushing a pre-built image
+    # build: .              # Uncomment this to build from local Dockerfile instead
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env.local
+    restart: unless-stopped

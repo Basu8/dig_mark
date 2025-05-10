@@ -1,65 +1,45 @@
 import Link from "next/link";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-10">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-gray-900 text-gray-300 py-16">
+      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
         
-        {/* Column 1 - Company Info */}
+        {/* Brand & Description */}
         <div>
-          <h2 className="text-2xl font-bold mb-4">Marketing Agency</h2>
-          <p className="text-sm text-gray-400">
-            We help businesses grow with our creative digital marketing solutions.  
-            <br />
-            From SEO to Meta Ads, we do it all.
+          <h2 className="text-2xl font-bold text-white mb-4">DigiMark</h2>
+          <p className="text-sm opacity-80">
+            We craft digital marketing strategies that build brands and drive growth.
           </p>
         </div>
 
-        {/* Column 2 - Quick Links */}
-        <div>
-          <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
-          <ul className="space-y-2">
-            <li><Link href="/" className="text-gray-400 hover:text-white">Home</Link></li>
-            <li><Link href="/services" className="text-gray-400 hover:text-white">Services</Link></li>
-            <li><Link href="/about" className="text-gray-400 hover:text-white">About Us</Link></li>
-            <li><Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link></li>
-          </ul>
+        {/* Navigation Links */}
+        <div className="flex flex-col space-y-3">
+          <h3 className="text-white font-semibold mb-3">Quick Links</h3>
+          <Link href="/services" className="hover:text-white transition">Services</Link>
+          <Link href="/about" className="hover:text-white transition">About</Link>
+          <Link href="/blog" className="hover:text-white transition">Blog</Link>
+          <Link href="/contact" className="hover:text-white transition">Contact</Link>
         </div>
 
-        {/* Column 3 - Contact Info */}
+        {/* Contact Information */}
         <div>
-          <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
-          <p className="text-sm text-gray-400">📞 +91 9876543210</p>
-          <p className="text-sm text-gray-400">📧 info@marketingagency.com</p>
-          <p className="text-sm text-gray-400">📍 Bengaluru, India</p>
-        </div>
-
-        {/* Column 4 - Social Media */}
-        <div>
-          <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
-          <div className="flex space-x-4">
-            <Link href="https://facebook.com" target="_blank">
-              <FaFacebookF className="text-gray-400 hover:text-white text-xl" />
-            </Link>
-            <Link href="https://instagram.com" target="_blank">
-              <FaInstagram className="text-gray-400 hover:text-white text-xl" />
-            </Link>
-            <Link href="https://linkedin.com" target="_blank">
-              <FaLinkedinIn className="text-gray-400 hover:text-white text-xl" />
-            </Link>
+          <h3 className="text-white font-semibold mb-3">Contact</h3>
+          <p className="text-sm opacity-80">Email: digimarkltd4@gmail.com</p>
+          {/* <p className="text-sm opacity-80">Phone: +91 98765 43210</p> */}
+          <div className="flex space-x-4 mt-4">
+            <a href="#" className="hover:text-white transition"><i className="fab fa-twitter"></i></a>
+            <a href="#" className="hover:text-white transition"><i className="fab fa-linkedin"></i></a>
+            <a href="#" className="hover:text-white transition"><i className="fab fa-instagram"></i></a>
           </div>
         </div>
 
       </div>
 
-      {/* Bottom Section */}
-      {/* <div className="text-center text-gray-500 text-sm mt-8 border-t border-gray-800 pt-4">
-        © {new Date().getFullYear()} Marketing Agency. All Rights Reserved.
-      </div> */}
-      <footer className="bg-gray-900 text-white text-center p-4">
-      <p>© 2025 Digital Marketing Agency. All rights reserved.</p>
-    </footer>
+      {/* Copyright */}
+      <div className="border-t border-gray-700 mt-12 pt-6 text-center text-sm opacity-70">
+        © {new Date().getFullYear()} DigiMarkltd. All Rights Reserved.
+      </div>
     </footer>
   );
 }
