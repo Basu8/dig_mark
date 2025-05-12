@@ -61,7 +61,7 @@ export default function Contact() {
 
       setSubmitStatus({
         success: true,
-        message: "Your message has been sent successfully! We&apos;ll get back to you soon.",
+        message: "Your message has been sent successfully! We will get back to you soon.",
       });
 
       setFormData({
