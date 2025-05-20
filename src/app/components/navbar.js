@@ -21,17 +21,21 @@ export default function Navbar() {
     <nav className="fixed w-full z-50 bg-gray-800 shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link href="/" className="flex-shrink-0 flex items-center">
-            <Image
-              src="/logo.jpg"
-              alt="DigiMark Logo"
-              width={60}
-              height={60}
-              className="h-10 w-auto"
-            />
-            <span className="ml-2 text-xl font-bold text-white hidden sm:block">DigiMark</span>
-          </Link>
+          {/* Logo - Matched to footer style */}
+          <div className="flex items-center">
+            <div className="h-12 w-12 border border-white rounded-md overflow-hidden">
+              <Link href="/" className="flex-shrink-0">
+                <Image
+                  src="/logo.png"
+                  alt="GrowthInfinity Logo"
+                  width={80}
+                  height={80}
+                  className="w-full h-full scale-110 object-cover"
+                  style={{ transform: 'scale(1.1)' }}
+                />
+              </Link>
+            </div>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8 items-center">
